@@ -12,4 +12,4 @@
 // Extra Credit:
 // Make squares darken by 10% with every interaction
 // Make every interaction randomly change the color of each square
-// Maybe: toggle button to switch between modes?
+// Maybe: toggle button to switch between modes? 
