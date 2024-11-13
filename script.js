@@ -1,5 +1,21 @@
 // TODO: create grid of squares with flexbox
-const container = document.querySelector("#etch-container")
+const INITIAL_SIZE = 16;
+
+function createInitialGrid(size) {
+    const container = document.querySelector("#etch-container");
+    const square; 
+
+    for (let i = 0; i < size; i++) {
+        square = document.createElement("div");
+
+        // Add attributes?
+        square.setAttribute("class", "gridsquare");
+        // Append to squares
+        container.appendChild(square);
+    }
+}
+
+createInitialGrid(INITIAL_SIZE);
 
 // TODO: create CSS class to make boxes square, create class for making squares black 
 
