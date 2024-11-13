@@ -1,5 +1,6 @@
 // TODO: create grid of squares with flexbox
 
+
 // TODO: create CSS class to make boxes square, create class for making squares black 
 
 // TODO: add event listener for hover when interacting with boxes
