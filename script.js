@@ -1,5 +1,5 @@
 // TODO: create grid of squares with flexbox
-
+const container = document.querySelector("#etch-container")
 
 // TODO: create CSS class to make boxes square, create class for making squares black 
 
