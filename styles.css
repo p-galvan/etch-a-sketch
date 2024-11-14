@@ -5,21 +5,36 @@
     box-sizing: border-box;
 }
 
-.gridsquare {
-    border-color: grey;
-    border-style: solid;
-    border-width: 1px;
-    background-color: beige;
-}
 #etch-container {
     background-color: red;
     border: 2px solid;
-    display: flex;
     height: 640px;
-    width: 960px;
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.btn-container  {
+.flex-square {
+    border-color: grey;
+    border-style: solid;
+    border-width: 0.5px;
+    background-color: beige;
+    flex: 1; 
+}
+
+.btn-container {
     margin: 20px;
     padding: 10px;
+}
+
+.flex-row {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;   
+}
+
+.square-pressed {
+    background-color: black;
 }
