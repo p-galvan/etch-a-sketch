@@ -8,7 +8,6 @@ function populateGrid(size) {
     
     // Create rows to hold individual squares
     for (let i = 0; i < size; i++) {
-        
         row = document.createElement("div");
         row.setAttribute("class", "flex-row");
 
@@ -45,9 +44,28 @@ function changeGrid() {
     
     btn.addEventListener("click", () => {
         newSize = prompt("Enter the new number of squares per side: ");
+        eraseGrid();
         populateGrid(Number(newSize));
     });
     
+}
+
+// Erases new grid in preparation for re-creating grid with new size
+function eraseGrid() {
+    let rows = document.querySelectorAll(".flex-row");
+
+    rows.forEach((row) => {
+         row.remove();
+    });
+    
+}
+
+// Clears all children from parent node
+function clearChildren(parentNode) {
+    while (parentNode) {
+        parentNode.removeChild(parentNode.firstChild);
+    }
+    return;
 }
 
 // Execute main function
