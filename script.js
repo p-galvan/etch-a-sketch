@@ -28,11 +28,22 @@ function populateGrid(size) {
 // Makes every individual square change color on mouseover
 function onHover() {
     let rows = document.querySelectorAll(".flex-row");
-    
+    let rainbowBtn = document.querySelector("#btn-rainbow");
+    let gradientBtn = document.querySelector("#btn-gradient")
+
     // Use mouseover event to trigger when moving inside child of each row
     rows.forEach(row => {
         row.addEventListener("mouseover", event => {
-            event.target.className = "flex-square square-pressed";
+            if (rainbowBtn.checked === true) {
+                let rgbColor = randomizeColor();
+                event.target.style.backgroundColor = rgbColor;
+            } 
+            else if (gradientBtn.checked === true) {
+                // TODO
+            }
+            else {
+                event.target.className = "flex-square square-pressed";
+            }
         });
     });
 
@@ -96,8 +107,16 @@ function modeToggle() {
     });
 }
 
+// Returns random RGB color (as a string) when called
+function randomizeColor() {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
 
+    let rgbValue = `rgb(${red}, ${green}, ${blue})`
 
+    return rgbValue;
+}
 
 // Execute main function
 function main() {
