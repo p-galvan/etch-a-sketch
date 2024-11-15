@@ -1,5 +1,6 @@
 const INITIAL_WIDTH = 16;
 
+// Populates grid of squares when passed an int argument
 function populateGrid(size) {
     const container = document.querySelector("#etch-container");
     let square = null;
@@ -25,6 +26,7 @@ function populateGrid(size) {
     }
 }
 
+// Makes every individual square change color on mouseover
 function onHover() {
     let rows = document.querySelectorAll(".flex-row");
     
@@ -36,8 +38,27 @@ function onHover() {
     });
 }
 
-populateGrid(INITIAL_WIDTH);
-onHover();
+// Prompts user for new grid size and calls populate grid
+function changeGrid() {
+    btn = document.querySelector("#new-grid");
+    let newSize = "";
+    
+    btn.addEventListener("click", () => {
+        newSize = prompt("Enter the new number of squares per side: ");
+        populateGrid(Number(newSize));
+    });
+    
+}
+
+// Execute main function
+function main() {
+    populateGrid(INITIAL_WIDTH);
+    onHover();
+    changeGrid();
+}
+
+main();
+
 
 // TODO: create CSS class to make boxes square, create class for making squares black 
 
