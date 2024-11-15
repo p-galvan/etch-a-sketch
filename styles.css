@@ -8,6 +8,8 @@
 #etch-container {
     background-color: red;
     border: 2px solid;
+    margin: auto;
+    padding: 40px;
     height: 640px;
     width: 640px;
     display: flex;
@@ -24,8 +26,8 @@
 }
 
 .btn-container {
-    margin: 20px;
-    padding: 10px;
+    margin: auto;
+    padding: 20px;
 }
 
 .flex-row {
@@ -37,4 +39,15 @@
 
 .square-pressed {
     background-color: black;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#select-btns {
+    display: flex;
+    gap: 20px;
 }
