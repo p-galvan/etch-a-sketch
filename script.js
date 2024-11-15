@@ -35,6 +35,10 @@ function onHover() {
             event.target.className = "flex-square square-pressed";
         });
     });
+
+    // Check if hover mode is ON!!!
+
+
 }
 
 // Prompts user for new grid size and calls populate grid
@@ -44,9 +48,14 @@ function changeGrid() {
     
     btn.addEventListener("click", () => {
         newSize = prompt("Enter the new number of squares per side: ");
-        eraseGrid();
-        populateGrid(Number(newSize));
-        onHover();
+        if (newSize === null) {
+            return;
+        }
+        else {
+            eraseGrid();
+            populateGrid(Number(newSize));
+            onHover();
+        }
     });
     
 }
@@ -68,11 +77,34 @@ function clearChildren(parentNode) {
     return;
 }
 
+// Turns on rainbow mode
+function modeToggle() {
+    rainbowBtn = document.querySelector("#btn-rainbow");
+    gradientBtn = document.querySelector("#btn-gradient");
+
+    rainbowBtn.addEventListener("click", () => {
+
+        if (rainbowBtn.checked === true) {
+            gradientBtn.checked = false;
+        }
+    });
+
+    gradientBtn.addEventListener("click", () => {
+        if (gradientBtn.checked === true) {
+            rainbowBtn.checked = false;
+        }
+    });
+}
+
+
+
+
 // Execute main function
 function main() {
     populateGrid(INITIAL_WIDTH);
     onHover();
     changeGrid();
+    modeToggle();
 }
 
 main();
