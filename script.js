@@ -46,6 +46,7 @@ function changeGrid() {
         newSize = prompt("Enter the new number of squares per side: ");
         eraseGrid();
         populateGrid(Number(newSize));
+        onHover();
     });
     
 }
@@ -56,8 +57,7 @@ function eraseGrid() {
 
     rows.forEach((row) => {
          row.remove();
-    });
-    
+    });    
 }
 
 // Clears all children from parent node

@@ -20,7 +20,7 @@
 .flex-square {
     border-color: grey;
     border-style: solid;
-    border-width: 0.5px;
+    border-width: 1px;
     background-color: beige;
     flex: 1; 
 }
