@@ -37,6 +37,7 @@ function onHover() {
             if (rainbowBtn.checked === true) {
                 let rgbColor = randomizeColor();
                 event.target.style.backgroundColor = rgbColor;
+                // TODO: change it so color only changes ONCE!!!
             } 
             else if (gradientBtn.checked === true) {
                 // TODO
